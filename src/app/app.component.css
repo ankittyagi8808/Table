@@ -1,0 +1,173 @@
+ .example-sidenav-content {
+    display: flex; 
+    align-items: left;
+    justify-content: center;
+   margin-left : 4%;
+       margin-top: 1.2%;
+  }
+  .changeColor{
+  background-color : lightsteelblue !important;}
+  .example-sidenav {
+    background-color: #e4e4e4;
+    width: 360px;
+    height:100%;
+  }
+  .active{
+    background-color:rgba(9, 30, 66, 0.25);
+  }
+
+  .sidenav-item{
+      color: #646e7a;
+      font-size:11px;
+      font-family: verdana;
+      height: 90% 
+  }
+
+  .mat-icon{
+    color: #646e7a;
+}
+.card-item{
+    flex: 1;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -ms-box-flex: 1;
+    -moz-box-flex: 1;
+    padding: 1px 1px 1px 1px;
+    width: calc(100%);
+    height: calc(100%);
+  
+}
+.toolbar{
+background-color:#0067b0;	
+height:70px;
+left:0;
+top:0;
+position: fixed;
+}
+.container{
+	height :"90%";
+}
+.mat-drawer-container[fullscreen] {
+    top: 9%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+.dashboardIcon{
+color:white;
+font-size: 30px;
+}
+.mat-body-color{
+color : white;
+font-size : 19px;
+padding-left:1%;
+}
+
+
+
+
+
+
+
+.example-card{
+padding: 1px;
+height: -webkit-fill-available;
+  }
+.matCardHeader{
+background-color: #5a68c8;
+margin: 50px -2px -2px -2px;
+
+}
+.matCardFooter{	
+ border-top: 1px solid #ccc;
+ background: #fff;
+ z-index: 10;
+ box-sizing: border-box;
+ padding-top: 11px;
+ padding-bottom: 11px;
+ margin-right: 0;
+ }
+.mat-card-title{
+margin-top: 15px;
+font-family:'Noto Sans's,ans-serif;
+margin-left: 10px;
+color:#ffffff;
+font-size: 18px;
+font-weight: bold;
+padding-left: 12px;
+}
+
+
+.mat-card-subtitle{
+	color: white;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+.mat-card-content{
+padding-left: 13px;	
+}
+.passed {
+    color: green;
+}
+.margincases{
+margin-left : 8px;	
+font-size: 14px;
+font-family:'Noto Sans's,ans-serif;
+}
+.mat-flat-button{
+font-size: 14px;
+color: #0067b0;
+margin-left: 259px;	
+text-transform: uppercase;
+transition: color 0.3s ease;
+background-color:white!important;
+}
+::ng-deep .mat-input-underline {
+   
+}
+
+.example-container{
+	margin-top: 3%;
+    margin-left: 2%;
+}
+
+.example-container2{
+margin-top: 5%;
+margin-left: 3%;	
+}
+.container3{
+margin-top: 7%;	
+}
+.disabledField{
+	 color:rgba(0, 0, 0, 0.64);
+     font-size: 17px;
+}
+.mat-form-field-label{
+	font-size: 20px !important;
+}
+.test{
+	margin-left : 2% !important;
+}
+.comments{
+	width : 350px!important;
+	margin-left : 2% !important;
+}
+.mat-tab-label{
+	background-color:transparent;
+	color: red !important;
+	font-weight:800;
+	padding:5px;
+}
+::ng-deep.mat-tab-header{
+	background-color:#0067b0 !important;
+}
+::ng-deep.mat-tab-label-content{
+	color:white;
+	font-weight:600;
+}
+.saveButton{
+	margin-left: 80%;
+    background-color: #0067b0 !important;
+    color:white;
+}

@@ -1,0 +1,85 @@
+
+<mat-toolbar class="mat-hue-2 mat-tall toolbar">
+        <span flex></span>
+        <div layout="row" layout-align="start center">
+          <mat-icon mat-list-icon class ="dashboardIcon" >list</mat-icon>
+          <span ></span>
+        </div>
+        <span ></span>
+        <div class="mat-body-2 mat-body-color">GEP Automation DashBoard</div>
+</mat-toolbar>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="side" class="example-sidenav" [ngStyle]="{ 'width.em': 25 }" opened="true" >
+    <mat-nav-list  role="navigation">
+ <mat-list-item *ngFor="let link of testRes">
+     <div class="sidenav-item" matTooltip = {{link.name}} (click) = "doClick(link.name)">
+          <p>{{link.name}}</p>
+        </div>
+        <br/>
+<mat-divider></mat-divider>
+  </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+<div class="grid-container">
+</div>
+<div class="example-container">
+ <mat-form-field class = "test">
+  <mat-label class="disabledLabel">Functional Area</mat-label>
+    <input matInput placeholder="Placeholder" disabled value={{item1.functionalArea}} class="disabledField">
+  </mat-form-field>
+  <mat-form-field class = "test">
+  <mat-label class="disabledLabel">Priority</mat-label>
+    <input matInput placeholder="Placeholder" disabled value={{item1.priority}} class="disabledField">
+  </mat-form-field>
+  <mat-form-field class = "test">
+  <mat-label class="disabledLabel" >Story Id</mat-label>
+    <input matInput placeholder="Placeholder" disabled value={{item1.storyId}} class="disabledField">
+  </mat-form-field>
+  <mat-form-field class = "test">
+    <mat-label class="disabledLabel" >Status</mat-label>
+    <input matInput placeholder="Placeholder" disabled value="Fail" class="disabledField">
+  </mat-form-field>  
+  <mat-form-field class = "test">
+  <mat-label class="disabledLabel">Total time taken</mat-label>
+    <input matInput placeholder="Placeholder" disabled value={{item1.totaltimeTaken}} class="disabledField">
+  </mat-form-field>
+  </div>
+  <div class="example-container2">
+  <mat-form-field >
+  <mat-select placeholder="Select Failure Reason"  [(ngModel)]="item1.failurReason">
+    <mat-option *ngFor="let failureType of failureTypes" value= {{failureType.viewValue}}>
+      {{failureType.viewValue}}
+    </mat-option>
+  </mat-select>
+  </mat-form-field>
+  <mat-form-field class = "test">
+    <input matInput placeholder="Defect Id"   [(ngModel)]="item1.defectId" class="disabledField">
+  </mat-form-field>
+  <mat-form-field class = "comments">
+    <textarea matInput placeholder="Comments" [(ngModel)]="item1.comments"></textarea>
+  </mat-form-field>
+  </div>
+  <div class = "container4">
+    <button mat-raised-button class="saveButton" (click)=save(item1.defectId,item1.comments,item1.failurReason)>Save</button>
+
+  </div>
+  <div class = "container3">
+  <mat-tab-group color = "Primary">
+  <mat-tab label="Scenario Description" class="first">
+  <div class="demo-tab-content">
+          {{item1.scenarioDesciption}}
+        </div>
+  </mat-tab>
+  <mat-tab label="Exception" class="first">
+  <div class="demo-tab-content">
+          {{item1.exception}}
+        </div>
+  </mat-tab>
+  <mat-tab label="Screenshot" class="first">
+  <img src={{item1.screenShot}}>
+  </mat-tab>
+  </mat-tab-group>
+  </div>
+</mat-sidenav-content>
+</mat-sidenav-container>
